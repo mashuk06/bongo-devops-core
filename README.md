@@ -105,7 +105,8 @@ git push -u origin main
 
 ---
 
-##🔶 Phase 2: The Engineer's Workflow - Intermediate
+## 🔶 Phase 2: The Engineer's Workflow - Intermediate
+
 
 ### Task 06: The "History Detective"
 Goal: Locate bug-introducing commits using git log and git blame.
