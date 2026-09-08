@@ -33,7 +33,7 @@ echo "# Git & GitHub Mastery - bongoDev" > README.md
 git add README.md
 git commit -m "chore: initial repository setup"
 
-```bash
+```
 
 ### Task 02: The "Safe Space"
 Goal: Protect secrets and sensitive files using .gitignore.
@@ -47,7 +47,7 @@ echo ".env" > .gitignore
 
 # Verify git status ignores .env
 git status
-```bash
+```
 
 
 ### Task 03: The "Parallel Universe"
