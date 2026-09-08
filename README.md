@@ -33,9 +33,12 @@ echo "# Git & GitHub Mastery - bongoDev" > README.md
 git add README.md
 git commit -m "chore: initial repository setup"
 
+```bash
+
 ### Task 02: The "Safe Space"
 Goal: Protect secrets and sensitive files using .gitignore.
 
+```bash
 # Create fake secret file
 echo "DB_PASSWORD=SuperSecretPass123!" > .env
 
@@ -44,11 +47,14 @@ echo ".env" > .gitignore
 
 # Verify git status ignores .env
 git status
+```bash
 
 
-###Task 03: The "Parallel Universe"
+### Task 03: The "Parallel Universe"
 Goal: Work on experimental features in an isolated branch without affecting main.
 
+
+```bash
 # Create and switch to feature branch
 git checkout -b feature/system-optimization
 
@@ -60,8 +66,12 @@ git commit -m "feat: add kernel tuning documentation"
 # Switch back to main (notice kernel_tuning.txt disappears from main workspace)
 git checkout main
 
-###Task 04: The "Selective Memory"
+```bash
+
+### Task 04: The "Selective Memory"
 Goal: Stage and commit separate concerns into distinct, granular commits.
+
+```bash
 
 # Create two independent files
 echo "UI/API configuration" > web_config.conf
@@ -75,18 +85,26 @@ git commit -m "feat(config): add web server configurations"
 git add db_config.conf
 git commit -m "feat(db): add database indexing and connection parameters"
 
-###Task 05: The "Cloud Connection"
+```bash
+
+### Task 05: The "Cloud Connection"
 Goal: Connect local repository to GitHub remote and push main.
 
 # Add GitHub remote repository link
-git remote add origin [https://github.com/your-username/bongodev-repository.git](https://github.com/your-username/bongodev-repository.git)
+git remote add origin [https://github.com/your-username/bongo-devops-core.git](https://github.com/your-username/bongo-devops-core.git)
 
 # Set main branch and push
 git branch -M main
 git push -u origin main
 
-###Task 06: The "History Detective"
+```bash
+
+##🔶 Phase 2: The Engineer's Workflow - Intermediate
+
+### Task 06: The "History Detective"
 Goal: Locate bug-introducing commits using git log and git blame.
+
+```bash
 
 # Search commit history or file line-by-line history
 git log -p -S "port"
@@ -94,8 +112,12 @@ git blame <filename>
 
 # Result: Identified Commit Hash, Author, and original Port configuration change!
 
-###Task 07: The "Safety Net"
+```bash
+
+### Task 07: The "Safety Net"
 Goal: Handle context switching and hotfix requests using git stash.
+
+```bash
 
 # Work on feature branch
 git checkout feature/system-optimization
@@ -114,8 +136,13 @@ git commit -m "fix: resolve critical production bug in main"
 git checkout feature/system-optimization
 git stash pop
 
-###Task 08: The "Clean Merge"
+
+```bash
+
+### Task 08: The "Clean Merge"
 Goal: Keep commit history clean by squashing feature branch commits before merging.
+
+```bash
 
 # Make small commits on feature branch
 git checkout feature/system-optimization
@@ -128,8 +155,12 @@ git checkout main
 git merge --squash feature/system-optimization
 git commit -m "feat: complete system performance optimization"
 
-###Task 09: The "Conflict Resolution"
+```bash
+
+### Task 09: The "Conflict Resolution"
 Goal: Intentionally generate and resolve a merge conflict.
+
+```bash
 
 # Modify line 1 of optimization.txt on main
 git checkout main
@@ -150,8 +181,12 @@ git merge feature/system-optimization
 git add optimization.txt
 git commit -m "fix(merge): resolve configuration conflict between main and feature"
 
-###Task 10: The "Time Machine"
+```bash
+
+### Task 10: The "Time Machine"
 Goal: Recover lost work/commits after an accidental hard reset using git reflog.
+
+```bash
 
 # Perform hard reset (simulating loss)
 git reset --hard HEAD~1
@@ -161,3 +196,5 @@ git reflog
 
 # Restore repository state to exact commit hash before deletion
 git reset --hard <commit-hash>
+
+```bash
