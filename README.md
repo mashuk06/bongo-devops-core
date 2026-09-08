@@ -39,6 +39,7 @@ git commit -m "chore: initial repository setup"
 Goal: Protect secrets and sensitive files using .gitignore.
 
 ```bash
+
 # Create fake secret file
 echo "DB_PASSWORD=SuperSecretPass123!" > .env
 
@@ -47,6 +48,7 @@ echo ".env" > .gitignore
 
 # Verify git status ignores .env
 git status
+
 ```
 
 
@@ -66,7 +68,7 @@ git commit -m "feat: add kernel tuning documentation"
 # Switch back to main (notice kernel_tuning.txt disappears from main workspace)
 git checkout main
 
-```bash
+```
 
 ### Task 04: The "Selective Memory"
 Goal: Stage and commit separate concerns into distinct, granular commits.
@@ -85,10 +87,12 @@ git commit -m "feat(config): add web server configurations"
 git add db_config.conf
 git commit -m "feat(db): add database indexing and connection parameters"
 
-```bash
+```
 
 ### Task 05: The "Cloud Connection"
 Goal: Connect local repository to GitHub remote and push main.
+
+```bash
 
 # Add GitHub remote repository link
 git remote add origin [https://github.com/your-username/bongo-devops-core.git](https://github.com/your-username/bongo-devops-core.git)
@@ -97,7 +101,7 @@ git remote add origin [https://github.com/your-username/bongo-devops-core.git](h
 git branch -M main
 git push -u origin main
 
-```bash
+```
 
 ##🔶 Phase 2: The Engineer's Workflow - Intermediate
 
@@ -112,7 +116,7 @@ git blame <filename>
 
 # Result: Identified Commit Hash, Author, and original Port configuration change!
 
-```bash
+```
 
 ### Task 07: The "Safety Net"
 Goal: Handle context switching and hotfix requests using git stash.
@@ -137,7 +141,7 @@ git checkout feature/system-optimization
 git stash pop
 
 
-```bash
+```
 
 ### Task 08: The "Clean Merge"
 Goal: Keep commit history clean by squashing feature branch commits before merging.
@@ -155,7 +159,7 @@ git checkout main
 git merge --squash feature/system-optimization
 git commit -m "feat: complete system performance optimization"
 
-```bash
+```
 
 ### Task 09: The "Conflict Resolution"
 Goal: Intentionally generate and resolve a merge conflict.
@@ -181,7 +185,7 @@ git merge feature/system-optimization
 git add optimization.txt
 git commit -m "fix(merge): resolve configuration conflict between main and feature"
 
-```bash
+```
 
 ### Task 10: The "Time Machine"
 Goal: Recover lost work/commits after an accidental hard reset using git reflog.
@@ -197,4 +201,4 @@ git reflog
 # Restore repository state to exact commit hash before deletion
 git reset --hard <commit-hash>
 
-```bash
+```
