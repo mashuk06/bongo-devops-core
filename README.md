@@ -95,13 +95,15 @@ Goal: Connect local repository to GitHub remote and push main.
 ```bash
 
 # Add GitHub remote repository link
-git remote add origin [https://github.com/your-username/bongo-devops-core.git](https://github.com/your-username/bongo-devops-core.git)
+git remote add origin [https://github.com/your-username/bongo-devops-core.git]
 
 # Set main branch and push
 git branch -M main
 git push -u origin main
 
 ```
+
+---
 
 ##🔶 Phase 2: The Engineer's Workflow - Intermediate
 
